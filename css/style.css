@@ -93,11 +93,11 @@ Table of content:
   /* misc */
   --border-default: solid 1px rgba(30, 30, 30, 1);
   --bg-default: #FCFDFD;
-  --bg-light: #E1EBE2;
-  --bg-dark-1: #092519;
-  --bg-dark-2: #111111;
-  --bg-dark-3: #222222;  
-  --bg-dark-1-rgb: 9, 37, 25;
+  --bg-light: #f5f3ee;
+  --bg-dark-1: #0d1e3b;
+  --bg-dark-2: #0a1628;
+  --bg-dark-3: #06101f;
+  --bg-dark-1-rgb: 13, 30, 59;
   --bg-grey: #eeeeee;
   --bg-gradient-1: 0deg, rgba(var(--primary-color-rgb), .1) 0%, rgba(var(--secondary-color-rgb), .2) 100%;
   --bg-color-even: #E8E8E8;

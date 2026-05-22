@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Chronos – Endeavours &amp; Development Pvt. Ltd.</title>
     <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Chronos Endeavours & Development – Bengaluru's trusted real estate partner for property development, brokerage, and property services." name="description">
-    <meta content="real estate bengaluru, joint development, property management, brokerage, chronos" name="keywords">
-    <!-- CSS Files ================================================== -->
+    <meta content="Chronos Endeavours & Development – Bengaluru's end-to-end real estate partner for property development, brokerage, and management." name="description">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/plugins.css" rel="stylesheet" type="text/css">
     <link href="css/swiper.css" rel="stylesheet" type="text/css">
@@ -17,843 +14,537 @@
     <link href="css/swiper-custom-1.css" rel="stylesheet" type="text/css">
     <link href="css/colors/scheme-01.css" id="colors" rel="stylesheet" type="text/css">
     <link href="css/datepicker.css" rel="stylesheet" type="text/css">
-    <style>
-        /* ── Chronos Brand Color Overrides ── */
-        :root {
-            --bg-dark-1: #0d1e3b;
-            --bg-dark-1-rgb: 13, 30, 59;
-            --primary-color: #C9A052;
-            --primary-color-rgb: 201, 160, 82;
-            --secondary-color: #C9A052;
-            --secondary-color-rgb: 201, 160, 82;
-        }
-
-        /* Text logo */
-        .chronos-logo {
-            display: flex;
-            flex-direction: column;
-            line-height: 1;
-            text-decoration: none;
-        }
-        .chronos-logo .logo-name {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 4px;
-            color: #0d1e3b;
-            text-transform: uppercase;
-        }
-        .chronos-logo .logo-sub {
-            font-size: 8px;
-            letter-spacing: 2px;
-            color: #0d1e3b;
-            text-transform: uppercase;
-            opacity: 0.7;
-        }
-        header.header-scroll .chronos-logo .logo-name,
-        header.header-scroll .chronos-logo .logo-sub { color: #fff; }
-
-        /* Hero tagline label */
-        .hero-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #C9A052;
-            margin-bottom: 20px;
-        }
-        .hero-label::before {
-            content: '';
-            display: block;
-            width: 32px;
-            height: 1px;
-            background: #C9A052;
-        }
-
-        /* Hero buttons */
-        .btn-hero-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: #fff;
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-        .btn-hero-secondary::before {
-            content: '';
-            display: block;
-            width: 32px;
-            height: 1px;
-            background: rgba(255,255,255,0.6);
-        }
-
-        /* Info cards in hero */
-        .hero-info-card {
-            background: #fff;
-            padding: 20px 24px;
-            display: inline-block;
-            min-width: 240px;
-        }
-        .hero-info-card.dark { background: #0d1e3b; color: #fff; }
-        .hero-info-card .card-tag {
-            font-size: 9px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #C9A052;
-            margin-bottom: 8px;
-        }
-        .hero-info-card h4 { margin: 0; font-size: 18px; line-height: 1.3; }
-        .hero-info-card.dark h4 { color: #fff; }
-        .hero-panel-label {
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.5);
-            margin-top: 8px;
-        }
-
-        /* Gold ticker */
-        .ticker-gold {
-            background: #C9A052;
-            padding: 16px 0;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        .ticker-gold .de-marquee-list-1 span {
-            font-size: 13px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #0d1e3b;
-            font-weight: 600;
-            margin: 0 20px;
-        }
-        .ticker-gold .de-marquee-list-1 .dot {
-            color: #0d1e3b;
-            opacity: 0.5;
-            margin: 0 10px;
-        }
-
-        /* Three arms section */
-        .arm-number {
-            font-size: 80px;
-            font-weight: 700;
-            color: rgba(255,255,255,0.07);
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-        .arm-tag {
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #C9A052;
-            margin-bottom: 10px;
-        }
-        .arm-col {
-            border-left: 1px solid rgba(255,255,255,0.08);
-            padding-left: 32px;
-        }
-        .arm-col:first-child { border-left: none; padding-left: 0; }
-        .arm-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .arm-list li {
-            font-size: 13px;
-            color: rgba(255,255,255,0.5);
-            padding: 4px 0;
-            padding-left: 12px;
-            position: relative;
-        }
-        .arm-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #C9A052;
-        }
-
-        /* Services grid */
-        .service-card {
-            padding: 40px 32px;
-            border: 1px solid rgba(13,30,59,0.1);
-            height: 100%;
-            transition: border-color 0.3s;
-        }
-        .service-card:hover { border-color: #C9A052; }
-        .service-icon {
-            width: 44px;
-            height: 44px;
-            border: 1px solid rgba(13,30,59,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-        }
-        .service-icon svg { width: 20px; height: 20px; stroke: #C9A052; fill: none; }
-        .service-card h4 {
-            font-size: 13px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #0d1e3b;
-            margin-bottom: 12px;
-        }
-        .service-card p { font-size: 14px; color: #666; margin: 0; }
-
-        /* Stats section */
-        .stat-block {
-            padding: 50px 40px;
-            border-left: 1px solid rgba(255,255,255,0.08);
-        }
-        .stat-block:first-child { border-left: none; }
-        .stat-number {
-            font-size: 52px;
-            font-weight: 300;
-            color: #C9A052;
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-        .stat-label {
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
-        }
-
-        /* CTA Banner */
-        .cta-gold {
-            background: #C9A052;
-            padding: 80px 0;
-        }
-        .cta-gold h2 {
-            font-size: 36px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #0d1e3b;
-            margin-bottom: 12px;
-        }
-        .cta-gold p { color: rgba(13,30,59,0.7); font-size: 14px; max-width: 480px; }
-        .btn-cta-dark {
-            display: inline-block;
-            background: #0d1e3b;
-            color: #C9A052;
-            padding: 18px 40px;
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        .btn-cta-dark:hover { opacity: 0.85; color: #C9A052; }
-
-        /* Chronos Difference */
-        .diff-left { background: #f5f3ee; padding: 80px 60px; }
-        .diff-right { background: #0d1e3b; padding: 80px 60px; position: relative; overflow: hidden; }
-        .diff-roman {
-            font-size: 22px;
-            color: #C9A052;
-            font-weight: 400;
-            min-width: 36px;
-            padding-top: 2px;
-        }
-        .diff-item {
-            display: flex;
-            gap: 24px;
-            padding: 28px 0;
-            border-bottom: 1px solid rgba(13,30,59,0.1);
-        }
-        .diff-item:last-child { border-bottom: none; }
-        .diff-item-title {
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #0d1e3b;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        .diff-item-text { font-size: 14px; color: #555; margin: 0; }
-        .diff-quote {
-            position: absolute;
-            bottom: 60px;
-            left: 60px;
-            right: 60px;
-        }
-        .diff-quote blockquote {
-            font-size: 20px;
-            line-height: 1.6;
-            color: #fff;
-            margin: 0 0 16px;
-            font-style: normal;
-        }
-        .diff-quote cite {
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #C9A052;
-        }
-
-        /* Footer overrides */
-        .chronos-footer { background: #0d1e3b; }
-        .footer-nav-title {
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
-            margin-bottom: 20px;
-        }
-        .footer-nav-link {
-            display: block;
-            color: rgba(255,255,255,0.65);
-            font-size: 14px;
-            margin-bottom: 10px;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .footer-nav-link:hover { color: #C9A052; }
-        .footer-logo-name {
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: 6px;
-            color: #fff;
-            text-transform: uppercase;
-        }
-        .footer-logo-sub {
-            font-size: 8px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
-        }
-        .footer-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 280px; margin-top: 16px; }
-        .footer-divider { border-color: rgba(255,255,255,0.08); margin: 40px 0; }
-        .subfooter-chronos {
-            font-size: 12px;
-            color: rgba(255,255,255,0.35);
-        }
-        .subfooter-links a {
-            font-size: 12px;
-            color: rgba(255,255,255,0.35);
-            text-decoration: none;
-            margin-left: 24px;
-        }
-        .subfooter-links a:hover { color: #C9A052; }
-        .subtitle { color: #C9A052; }
-    </style>
+    <link href="css/chronos.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-    <header class="header-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="de-flex">
-                        <div class="de-flex-col">
-                            <div id="logo">
-                                <a href="index.html" class="chronos-logo">
-                                    <span class="logo-name">Chronos</span>
-                                    <span class="logo-sub">Endeavours &amp; Development Pvt. Ltd.</span>
-                                </a>
-                            </div>
+<!-- ── HEADER ──────────────────────────────────────────────── -->
+<header class="header-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="de-flex">
+                    <div class="de-flex-col">
+                        <div id="logo">
+                            <a href="index.html" class="chronos-logo">
+                                <span class="logo-name">Chronos</span>
+                                <span class="logo-sub">Endeavours &amp; Development Pvt. Ltd.</span>
+                            </a>
                         </div>
-
-                        <div class="de-flex-col">
-                            <div class="de-flex-col header-col-mid">
-                                <ul id="mainmenu">
-                                    <li><a class="menu-item" href="index.html">Home</a></li>
-                                    <li><a class="menu-item" href="#section-services">Services</a></li>
-                                    <li><a class="menu-item" href="#section-difference">Why Us</a></li>
-                                    <li><a class="menu-item" href="#section-cta">Invest With Us</a></li>
-                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="de-flex-col">
+                        <div class="de-flex-col header-col-mid">
+                            <ul id="mainmenu">
+                                <li><a class="menu-item" href="index.html">Home</a></li>
+                                <li><a class="menu-item" href="#section-services">Services</a></li>
+                                <li><a class="menu-item" href="#section-difference">Why Us</a></li>
+                                <li><a class="menu-item" href="#section-invest">Invest With Us</a></li>
+                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                            </ul>
                         </div>
-
-                        <div class="de-flex-col">
-                            <div class="menu_side_area">
-                                <a href="contact.html" class="btn-main fx-slide"><span>Contact Us</span></a>
-                                <span id="menu-btn"></span>
-                            </div>
+                    </div>
+                    <div class="de-flex-col">
+                        <div class="menu_side_area">
+                            <a href="contact.html" class="btn-main fx-slide"><span>Contact Us</span></a>
+                            <span id="menu-btn"></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <a href="#" id="back-to-top"></a>
-        <div id="de-loader"></div>
+<main>
+    <a href="#" id="back-to-top"></a>
+    <div id="de-loader"></div>
 
-        <!-- ── HERO ──────────────────────────────────────────────── -->
-        <section class="bg-dark-1 text-light no-top no-bottom relative overflow-hidden mt-80 mt-sm-50">
-            <div class="mh-800">
-                <div class="abs w-100 py-5 mt-3 z-3">
-                    <div class="container">
-                        <div class="row g-4 justify-content-between">
-                            <div class="col-md-7">
-                                <div class="hero-label wow fadeInUp">Real Estate &nbsp;·&nbsp; Bengaluru</div>
-                                <h1 class="fs-72 fs-xs-10vw lh-1-1 split">C H R O N O S</h1>
-                                <div style="width:48px;height:2px;background:#C9A052;margin:24px 0;" class="wow fadeInUp" data-wow-delay=".3s"></div>
-                                <p class="fs-18 wow fadeInUp" data-wow-delay=".4s" style="max-width:400px;color:rgba(255,255,255,0.75);">Built across time with trust.</p>
-                                <div class="d-flex align-items-center gap-4 mt-4 wow fadeInUp" data-wow-delay=".5s">
-                                    <a href="contact.html" class="btn-main fx-slide"><span>Invest With Us</span></a>
-                                    <a href="#section-services" class="btn-hero-secondary">Our Services</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 xs-hide">
-                                <div class="mt-4 text-md-end wow fadeIn" data-wow-delay=".5s">
-                                    <span style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);">Bengaluru · India</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- ── HERO ──────────────────────────────────────────────── -->
+    <section class="p-0 no-top no-bottom relative mt-80 mt-sm-50" style="min-height:100vh;">
+
+        <!-- Dark left panel -->
+        <div class="hero-left">
+            <div class="hero-eyebrow wow fadeInUp">Real Estate &nbsp;·&nbsp; Bengaluru</div>
+            <h1 class="hero-title wow fadeInUp" data-wow-delay=".1s">Chronos</h1>
+            <div class="hero-divider wow fadeInUp" data-wow-delay=".2s"></div>
+            <p class="hero-tagline wow fadeInUp" data-wow-delay=".3s">Built across time with trust.</p>
+            <div class="hero-actions wow fadeInUp" data-wow-delay=".4s">
+                <a href="contact.html" class="btn-hero-primary">Invest With Us</a>
+                <a href="#section-services" class="btn-hero-ghost">Our Services</a>
+            </div>
+
+            <!-- Floating info cards -->
+            <div class="hero-cards wow fadeInUp" data-wow-delay=".6s">
+                <div class="hero-card">
+                    <div class="hero-card-tag">Landmark Partnerships</div>
+                    <h4>Bengaluru's Most Trusted JD Partner</h4>
                 </div>
-                <div class="abs bottom-0 w-100 py-5 z-3">
-                    <div class="container">
-                        <div class="row justify-content-end align-items-end">
-                            <div class="col-lg-6">
-                                <h5 class="mb-lg-0 mb-sm-5 wow fadeIn" data-wow-delay=".5s" style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);">Joint Development &amp; JVD</h5>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="row g-3 wow zoomIn" data-wow-delay=".4s">
-                                    <div class="col-12">
-                                        <div class="hero-info-card">
-                                            <div class="card-tag">Landmark Partnerships</div>
-                                            <h4>Bengaluru's Most Trusted JD Partner</h4>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="hero-info-card dark">
-                                            <div class="card-tag">Under Management</div>
-                                            <h4>₹200Cr+ in Prime Bengaluru Assets</h4>
-                                        </div>
-                                        <div class="hero-panel-label mt-2">Premium Lettings &amp; Property Management</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hero-card dark">
+                    <div class="hero-card-tag">Under Management</div>
+                    <h4>₹200Cr+ in Prime Bengaluru Assets</h4>
+                    <div class="hero-panel-tag">Premium Lettings &amp; Property Management</div>
                 </div>
-                <div class="wm abs-center z-2 fw-600 text-uppercase">01</div>
-                <div class="swiper wow scaleIn">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="swiper-inner" data-bgimage="url(images/slider/1.webp) center">
-                                <div class="sw-overlay op-4"></div>
-                                <div class="gradient-edge-left z-2"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-inner" data-bgimage="url(images/slider/2.webp) center">
-                                <div class="sw-overlay op-4"></div>
-                                <div class="gradient-edge-left z-2"></div>
-                            </div>
-                        </div>
+            </div>
+
+            <!-- Large watermark number -->
+            <div class="hero-bg-num">01</div>
+        </div>
+
+        <!-- Right slider panel -->
+        <div class="hero-right">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper-inner" data-bgimage="url(images/slider/1.webp) center"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-inner" data-bgimage="url(images/slider/2.webp) center"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- ── GOLD TICKER ──────────────────────────────────────── -->
-        <section class="p-0">
-            <div class="ticker-gold">
-                <div class="de-marquee-list-1">
-                    <span>Bengaluru, Karnataka</span><span class="dot">✦</span>
-                    <span>Endeavours &amp; Development Pvt. Ltd.</span><span class="dot">✦</span>
-                    <span>Joint Development</span><span class="dot">✦</span>
-                    <span>Joint Venture Development</span><span class="dot">✦</span>
-                    <span>Premium Lettings</span><span class="dot">✦</span>
-                    <span>Property Management</span><span class="dot">✦</span>
-                    <span>Bengaluru, Karnataka</span><span class="dot">✦</span>
-                    <span>Endeavours &amp; Development Pvt. Ltd.</span><span class="dot">✦</span>
-                    <span>Joint Development</span><span class="dot">✦</span>
-                    <span>Joint Venture Development</span><span class="dot">✦</span>
-                    <span>Premium Lettings</span><span class="dot">✦</span>
-                    <span>Property Management</span><span class="dot">✦</span>
-                </div>
+        <!-- Location tag -->
+        <div class="hero-location wow fadeIn" data-wow-delay=".8s">Bengaluru · India</div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll">Scroll</div>
+
+    </section>
+
+    <!-- ── GOLD TICKER ────────────────────────────────────────── -->
+    <section class="p-0">
+        <div class="ch-ticker">
+            <div class="de-marquee-list-1">
+                <span class="ch-ticker-item">Bengaluru, Karnataka</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Endeavours &amp; Development Pvt. Ltd.</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Joint Development</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Joint Venture Development</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Premium Lettings</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Property Management</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Bengaluru, Karnataka</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Endeavours &amp; Development Pvt. Ltd.</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Joint Development</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Joint Venture Development</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Premium Lettings</span>
+                <span class="ch-ticker-dot">✦</span>
+                <span class="ch-ticker-item">Property Management</span>
+                <span class="ch-ticker-dot">✦</span>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ── THREE ARMS ────────────────────────────────────────── -->
-        <section class="bg-dark-1 text-light">
-            <div class="container">
-                <div class="row g-4 mb-5 align-items-start">
-                    <div class="col-lg-6">
-                        <div class="subtitle wow fadeInUp" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;">Our Business</div>
-                        <h2 class="wow fadeInUp" data-wow-delay=".2s" style="font-size:48px;line-height:1.1;">THREE ARMS.<br><span style="color:#C9A052;">ONE VISION.</span></h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="wow fadeInUp" data-wow-delay=".3s" style="color:rgba(255,255,255,0.55);font-size:15px;line-height:1.8;padding-top:16px;">Chronos is structured around three distinct but deeply connected business arms — designed to serve every stage of your property journey, from acquisition through management and beyond.</p>
-                    </div>
-                </div>
-                <div class="row g-4 mt-3">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".1s">
-                        <div class="arm-col">
-                            <div class="arm-number">01</div>
-                            <div class="arm-tag">Arm One</div>
-                            <h3 style="font-size:16px;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:16px;">Property Development</h3>
-                            <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8;margin-bottom:20px;">We develop residential and commercial properties across Bengaluru, partnering with landowners, investors, and institutions to create lasting built environments.</p>
-                            <ul class="arm-list">
-                                <li>Residential apartments &amp; villas</li>
-                                <li>Commercial &amp; mixed-use projects</li>
-                                <li>Joint development agreements (JDA)</li>
-                                <li>Land acquisition &amp; feasibility</li>
-                                <li>End-to-end project management</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="arm-col">
-                            <div class="arm-number">02</div>
-                            <div class="arm-tag">Arm Two</div>
-                            <h3 style="font-size:16px;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:16px;">Brokerage</h3>
-                            <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8;margin-bottom:20px;">We connect buyers, tenants, investors, and sellers across Chronos-developed and third-party properties — your trusted partner in every transaction.</p>
-                            <ul class="arm-list">
-                                <li>Residential sales &amp; lettings</li>
-                                <li>Commercial leasing</li>
-                                <li>Third-party developer listings</li>
-                                <li>Investment portfolio advisory</li>
-                                <li>NRI &amp; institutional buyer support</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="arm-col">
-                            <div class="arm-number">03</div>
-                            <div class="arm-tag">Arm Three</div>
-                            <h3 style="font-size:16px;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:16px;">Property Services</h3>
-                            <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8;margin-bottom:20px;">We maintain, manage, and optimise every property in our ecosystem — keeping buildings running, residents happy, and assets performing.</p>
-                            <ul class="arm-list">
-                                <li>Facilities &amp; maintenance management</li>
-                                <li>Tenant coordination</li>
-                                <li>Rental income management</li>
-                                <li>Renovation &amp; fit-out</li>
-                                <li>Legal &amp; compliance support</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── SERVICES GRID ─────────────────────────────────────── -->
-        <section id="section-services" style="background:#f5f3ee;">
-            <div class="container">
-                <div class="row g-4 mb-5 align-items-start">
-                    <div class="col-lg-6">
-                        <div class="subtitle wow fadeInUp" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;">What We Offer</div>
-                        <h2 class="wow fadeInUp" data-wow-delay=".2s" style="font-size:48px;line-height:1.1;color:#0d1e3b;">AN <span style="color:rgba(13,30,59,0.35);">END-TO-END</span><br>PLATFORM</h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="wow fadeInUp" data-wow-delay=".3s" style="color:#555;font-size:15px;line-height:1.8;padding-top:16px;">Whether you're a first-time buyer, seasoned investor, landowner, or developer — Chronos is structured to meet you exactly where you are.</p>
-                    </div>
-                </div>
-                <div class="row g-0 wow fadeInUp" data-wow-delay=".2s">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                            </div>
-                            <h4>Buy &amp; Sell Properties</h4>
-                            <p>Residential and commercial acquisition and disposal, backed by market data, site analysis, and seasoned advisory — for every budget and ambition.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                            </div>
-                            <h4>Letting &amp; Rentals</h4>
-                            <p>Full-service letting for residential and commercial spaces. We handle tenant sourcing, vetting, agreements, and ongoing management.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                            </div>
-                            <h4>Investment Guidance</h4>
-                            <p>Market-led investment advisory for residential and commercial assets in Bengaluru — from entry-level plots to large-scale JDA structures.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                            </div>
-                            <h4>Property Management</h4>
-                            <p>Comprehensive building and asset management including maintenance, tenant coordination, accounts, and regulatory compliance — end to end.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                            </div>
-                            <h4>Joint Development</h4>
-                            <p>Structured JDA and JV partnerships for landowners and investors looking to unlock the value in their land without upfront capital risk.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                            </div>
-                            <h4>NRI Advisory</h4>
-                            <p>Dedicated support for non-resident Indians looking to invest in Bengaluru real estate — from sourcing to legal compliance and ongoing management.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── STATS ─────────────────────────────────────────────── -->
-        <section class="bg-dark-1 text-light no-top no-bottom">
-            <div style="border-top:3px solid #C9A052;"></div>
-            <div class="container-fluid px-0">
-                <div class="row g-0 wow fadeInUp">
-                    <div class="col-lg-3 col-6">
-                        <div class="stat-block">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Business Arms</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="stat-block">
-                            <div class="stat-number">₹6Cr+</div>
-                            <div class="stat-label">Portfolio in Development</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="stat-block">
-                            <div class="stat-number">BLR</div>
-                            <div class="stat-label">Bengaluru Focused</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="stat-block">
-                            <div class="stat-number">360°</div>
-                            <div class="stat-label">End-to-End Service</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── CTA BANNER ────────────────────────────────────────── -->
-        <section id="section-cta" class="cta-gold">
-            <div class="container">
-                <div class="row align-items-center g-4">
-                    <div class="col-lg-8 wow fadeInUp">
-                        <h2>Invest in Bangalore's Future</h2>
-                        <p>Partner with Chronos for asset-backed returns of 15–18% p.a. RERA-registered projects. Institutional transparency. Fixed timelines.</p>
-                    </div>
-                    <div class="col-lg-4 text-lg-end wow fadeInUp" data-wow-delay=".2s">
-                        <a href="contact.html" class="btn-cta-dark">View Opportunities</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── CHRONOS DIFFERENCE ─────────────────────────────────── -->
-        <section id="section-difference" class="p-0">
-            <div class="row g-0">
-                <div class="col-lg-6">
-                    <div class="diff-left">
-                        <div class="subtitle wow fadeInUp" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;">Why Choose Us</div>
-                        <h2 class="wow fadeInUp" data-wow-delay=".1s" style="color:#0d1e3b;font-size:42px;line-height:1.15;margin-bottom:40px;">THE <strong>CHRONOS</strong><br><span style="color:rgba(13,30,59,0.35);">DIFFERENCE</span></h2>
-                        <div class="diff-item wow fadeInUp" data-wow-delay=".2s">
-                            <div class="diff-roman">I</div>
-                            <div>
-                                <div class="diff-item-title">Deep Bengaluru Roots</div>
-                                <p class="diff-item-text">Decades of relationships with landowners, builders, and institutions across the city give us access and intelligence that no newcomer can replicate.</p>
-                            </div>
-                        </div>
-                        <div class="diff-item wow fadeInUp" data-wow-delay=".3s">
-                            <div class="diff-roman">II</div>
-                            <div>
-                                <div class="diff-item-title">Institutional Transparency</div>
-                                <p class="diff-item-text">Every engagement is backed by clear legal frameworks, documented agreements, and regular financial reporting. No ambiguity, ever.</p>
-                            </div>
-                        </div>
-                        <div class="diff-item wow fadeInUp" data-wow-delay=".4s">
-                            <div class="diff-roman">III</div>
-                            <div>
-                                <div class="diff-item-title">White-Glove Service</div>
-                                <p class="diff-item-text">A dedicated relationship manager for every client. We do not treat properties as numbers — we treat them as legacies.</p>
-                            </div>
-                        </div>
-                        <div class="diff-item wow fadeInUp" data-wow-delay=".5s">
-                            <div class="diff-roman">IV</div>
-                            <div>
-                                <div class="diff-item-title">End-to-End Expertise</div>
-                                <p class="diff-item-text">Land identification, development structuring, tenant placement, ongoing management — Chronos is your single, trusted partner.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="diff-right" style="min-height:600px;">
-                        <div class="abs abs-center w-100 px-5 text-center" style="opacity:0.05;">
-                            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:300px;">
-                                <path d="M100 10 L190 80 L190 190 L10 190 L10 80 Z" stroke="white" stroke-width="2" fill="none"/>
-                                <path d="M100 10 L155 55 L155 130 L45 130 L45 55 Z" stroke="white" stroke-width="1.5" fill="none"/>
-                            </svg>
-                        </div>
-                        <div class="diff-quote wow fadeInUp" data-wow-delay=".4s">
-                            <blockquote>"Real estate is not just built on land. It is built on trust, time, and the right partner."</blockquote>
-                            <cite>— Chronos Philosophy</cite>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── CONTACT CTA ────────────────────────────────────────── -->
-        <section id="section-contact">
-            <div class="container">
-                <div class="row g-4 justify-content-center align-items-center">
-                    <div class="col-lg-5">
-                        <div class="subtitle wow fadeInUp" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;">Get in Touch</div>
-                        <h2 class="wow fadeInUp" data-wow-delay=".2s" style="color:#0d1e3b;">Schedule a Consultation</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".3s">Ready to invest, develop, or let? Tell us what you're looking for and our team will reach out within 24 hours.</p>
-                        <div class="mt-4 wow fadeInUp" data-wow-delay=".4s">
-                            <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#C9A052;margin-bottom:6px;">Email</div>
-                            <div style="font-size:16px;color:#0d1e3b;">hello@chronosproperties.in</div>
-                        </div>
-                        <div class="mt-3 wow fadeInUp" data-wow-delay=".5s">
-                            <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#C9A052;margin-bottom:6px;">Hours</div>
-                            <div style="font-size:16px;color:#0d1e3b;">Monday – Saturday, 9:00 AM – 6:00 PM IST</div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 wow fadeInUp" data-wow-delay=".6s">
-                        <form name="contactForm" id="contact_form" method="post" action="contact.html">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="+91 98XXX XXXXX">
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="your@email.com" required>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="relative">
-                                        <select name="interest" class="form-control">
-                                            <option value="">I am interested in…</option>
-                                            <option>Buying Property</option>
-                                            <option>Renting / Letting</option>
-                                            <option>Selling My Property</option>
-                                            <option>Investment Advisory</option>
-                                            <option>Joint Development</option>
-                                            <option>Property Management</option>
-                                            <option>I Have Land</option>
-                                            <option>General Enquiry</option>
-                                        </select>
-                                        <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <textarea name="message" id="message" class="form-control h-100px" placeholder="Tell us about your requirement — location, size, goals, or any questions you have…" required></textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <div id="submit">
-                                        <input type="submit" id="send_message" value="Submit Enquiry" class="btn-main">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <div id="success_message" class="bg-color mt-4 p-40 rounded-3 shadow-sm">
-                            <h4 class="mb-2">Enquiry Received!</h4>
-                            <p class="mb-0">Thank you <strong><span id="user_name"></span></strong>. Our team will contact you within 24 hours.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── MARQUEE ────────────────────────────────────────────── -->
-        <section class="p-0" aria-label="section">
-            <div class="bg-dark-1 text-light d-flex py-3 lh-1">
-                <div class="de-marquee-list-1">
-                    <h3 class="d-inline-block mb-0 fs-48 mx-4" style="color:#C9A052;">Property Development</h3>
-                    <h3 class="d-inline-block mb-0 fs-48 mx-4 op-5" style="color:#fff;">Brokerage</h3>
-                    <h3 class="d-inline-block mb-0 fs-48 mx-4" style="color:#C9A052;">Property Services</h3>
-                    <h3 class="d-inline-block mb-0 fs-48 mx-4 op-5" style="color:#fff;">Joint Development</h3>
-                    <h3 class="d-inline-block mb-0 fs-48 mx-4" style="color:#C9A052;">Investment Advisory</h3>
-                    <h3 class="d-inline-block mb-0 fs-48 mx-4 op-5" style="color:#fff;">NRI Advisory</h3>
-                    <h3 class="d-inline-block mb-0 fs-48 mx-4" style="color:#C9A052;">Premium Lettings</h3>
-                    <h3 class="d-inline-block mb-0 fs-48 mx-4 op-5" style="color:#fff;">Land Acquisition</h3>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ── FOOTER ──────────────────────────────────────────────── -->
-    <footer class="chronos-footer text-light">
+    <!-- ── THREE ARMS ─────────────────────────────────────────── -->
+    <section class="ch-section ch-section-dark">
         <div class="container">
-            <div class="row g-5 pt-5 pb-4">
-                <div class="col-lg-4">
-                    <div class="footer-logo-name">Chronos</div>
-                    <div class="footer-logo-sub">Endeavours &amp; Development Pvt. Ltd.</div>
-                    <p class="footer-desc">Built across time with trust. Bengaluru's end-to-end property partner — registered and operating across development, brokerage, and property services.</p>
-                    <div class="social-icons mt-4">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <div class="row g-4 ch-section-header align-items-end">
+                <div class="col-lg-6">
+                    <div class="ch-label wow fadeInUp">Our Business</div>
+                    <h2 class="ch-section-title light wow fadeInUp" data-wow-delay=".1s">
+                        Three Arms.<br><span class="gold">One Vision.</span>
+                    </h2>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <p class="ch-section-body light wow fadeInUp" data-wow-delay=".2s">
+                        Chronos is structured around three distinct but deeply connected business arms — designed to serve every stage of your property journey, from acquisition through management and beyond.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="arm-col">
+                        <div class="arm-number">01</div>
+                        <div class="arm-tag">Arm One</div>
+                        <div class="arm-title">Property Development</div>
+                        <p class="arm-body">We develop residential and commercial properties across Bengaluru, partnering with landowners, investors, and institutions to create lasting built environments.</p>
+                        <ul class="arm-list">
+                            <li>Residential apartments &amp; villas</li>
+                            <li>Commercial &amp; mixed-use projects</li>
+                            <li>Joint development agreements (JDA)</li>
+                            <li>Land acquisition &amp; feasibility</li>
+                            <li>End-to-end project management</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-6">
-                    <div class="footer-nav-title">Navigate</div>
-                    <a href="index.html" class="footer-nav-link">Home</a>
-                    <a href="#section-services" class="footer-nav-link">Services</a>
-                    <a href="#section-difference" class="footer-nav-link">Why Chronos</a>
-                    <a href="contact.html" class="footer-nav-link">Contact</a>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="arm-col">
+                        <div class="arm-number">02</div>
+                        <div class="arm-tag">Arm Two</div>
+                        <div class="arm-title">Brokerage</div>
+                        <p class="arm-body">We connect buyers, tenants, investors, and sellers across Chronos-developed and third-party properties — your trusted partner in every transaction.</p>
+                        <ul class="arm-list">
+                            <li>Residential sales &amp; lettings</li>
+                            <li>Commercial leasing</li>
+                            <li>Third-party developer listings</li>
+                            <li>Investment portfolio advisory</li>
+                            <li>NRI &amp; institutional buyer support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="arm-col">
+                        <div class="arm-number">03</div>
+                        <div class="arm-tag">Arm Three</div>
+                        <div class="arm-title">Property Services</div>
+                        <p class="arm-body">We maintain, manage, and optimise every property in our ecosystem — keeping buildings running, residents happy, and assets performing.</p>
+                        <ul class="arm-list">
+                            <li>Facilities &amp; maintenance management</li>
+                            <li>Tenant coordination</li>
+                            <li>Rental income management</li>
+                            <li>Renovation &amp; fit-out</li>
+                            <li>Legal &amp; compliance support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SERVICES ───────────────────────────────────────────── -->
+    <section id="section-services" class="ch-section ch-section-cream">
+        <div class="container">
+            <div class="row g-4 ch-section-header align-items-end">
+                <div class="col-lg-6">
+                    <div class="ch-label wow fadeInUp">What We Offer</div>
+                    <h2 class="ch-section-title wow fadeInUp" data-wow-delay=".1s">
+                        An <span class="muted">End-to-End</span><br>Platform
+                    </h2>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <p class="ch-section-body wow fadeInUp" data-wow-delay=".2s">
+                        Whether you're a first-time buyer, seasoned investor, landowner, or developer — Chronos is structured to meet you exactly where you are.
+                    </p>
+                </div>
+            </div>
+            <div class="svc-grid row g-0 wow fadeInUp" data-wow-delay=".2s">
+                <div class="col-lg-4 col-md-6">
+                    <div class="svc-card">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <div class="svc-title">Buy &amp; Sell Properties</div>
+                        <p class="svc-body">Residential and commercial acquisition and disposal, backed by market data, site analysis, and seasoned advisory — for every budget and ambition.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="svc-card">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="1"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                        </div>
+                        <div class="svc-title">Letting &amp; Rentals</div>
+                        <p class="svc-body">Full-service letting for residential and commercial spaces. We handle tenant sourcing, vetting, agreements, and ongoing management.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="svc-card">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                        </div>
+                        <div class="svc-title">Investment Guidance</div>
+                        <p class="svc-body">Market-led investment advisory for residential and commercial assets in Bengaluru — from entry-level plots to large-scale JDA structures.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="svc-card">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="svc-title">Property Management</div>
+                        <p class="svc-body">Comprehensive building and asset management including maintenance, tenant coordination, accounts, and regulatory compliance — end to end.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="svc-card">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                        </div>
+                        <div class="svc-title">Joint Development</div>
+                        <p class="svc-body">Structured JDA and JV partnerships for landowners and investors looking to unlock land value without upfront capital risk.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="svc-card">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                        </div>
+                        <div class="svc-title">NRI Advisory</div>
+                        <p class="svc-body">Dedicated support for non-resident Indians investing in Bengaluru real estate — from sourcing to legal compliance and ongoing management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── STATS ──────────────────────────────────────────────── -->
+    <section class="p-0 stats-bar">
+        <div class="container-fluid px-0">
+            <div class="row g-0 wow fadeInUp">
+                <div class="col-lg-3 col-6">
+                    <div class="stat-block">
+                        <div class="stat-num">3</div>
+                        <div class="stat-lbl">Business Arms</div>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <div class="footer-nav-title">Services</div>
-                    <a href="contact.html" class="footer-nav-link">Property Development</a>
-                    <a href="contact.html" class="footer-nav-link">Buy &amp; Sell</a>
-                    <a href="contact.html" class="footer-nav-link">Letting &amp; Rentals</a>
-                    <a href="contact.html" class="footer-nav-link">Property Management</a>
-                    <a href="contact.html" class="footer-nav-link">Joint Development</a>
-                    <a href="contact.html" class="footer-nav-link">NRI Advisory</a>
+                    <div class="stat-block">
+                        <div class="stat-num">₹6Cr+</div>
+                        <div class="stat-lbl">Portfolio in Development</div>
+                    </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="footer-nav-title">Contact</div>
-                    <p class="footer-nav-link">[Office Address], Bengaluru, Karnataka</p>
-                    <a href="tel:+91" class="footer-nav-link">+91 [Number]</a>
-                    <a href="mailto:hello@chronosproperties.in" class="footer-nav-link">hello@chronosproperties.in</a>
-                    <p class="footer-nav-link">Mon – Sat, 9am – 6pm</p>
+                <div class="col-lg-3 col-6">
+                    <div class="stat-block">
+                        <div class="stat-num">BLR</div>
+                        <div class="stat-lbl">Bengaluru Focused</div>
+                    </div>
                 </div>
-            </div>
-            <hr class="footer-divider">
-            <div class="row pb-4">
-                <div class="col-md-6">
-                    <span class="subfooter-chronos">© 2025 Chronos · Endeavours and Development Pvt. Ltd. All rights reserved.</span>
-                </div>
-                <div class="col-md-6 text-md-end subfooter-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">RERA Compliant</a>
+                <div class="col-lg-3 col-6">
+                    <div class="stat-block">
+                        <div class="stat-num">360°</div>
+                        <div class="stat-lbl">End-to-End Service</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- Javascript Files ================================================== -->
-    <script src="js/vendors.js"></script>
-    <script src="js/designesia.js"></script>
-    <script src="js/custom-marquee.js"></script>
-    <script src="js/custom-datepicker.js"></script>
-    <script src="js/validation-visit.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/custom-swiper-1.js"></script>
+    <!-- ── CTA INVEST ─────────────────────────────────────────── -->
+    <section id="section-invest" class="ch-cta">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8 wow fadeInUp">
+                    <h2 class="ch-cta-title">Invest in Bangalore's Future</h2>
+                    <p class="ch-cta-body">Partner with Chronos for asset-backed returns of 15–18% p.a. RERA-registered projects. Institutional transparency. Fixed timelines.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end wow fadeInUp" data-wow-delay=".2s">
+                    <a href="contact.html" class="btn-dark-outline">View Opportunities</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CHRONOS DIFFERENCE ─────────────────────────────────── -->
+    <section id="section-difference" class="p-0">
+        <div class="diff-wrap">
+            <div class="diff-left">
+                <div class="ch-label wow fadeInUp">Why Choose Us</div>
+                <h2 class="diff-title wow fadeInUp" data-wow-delay=".1s">
+                    The <strong>Chronos</strong><br><span class="muted">Difference</span>
+                </h2>
+                <div class="diff-item wow fadeInUp" data-wow-delay=".2s">
+                    <div class="diff-roman">I</div>
+                    <div>
+                        <div class="diff-item-title">Deep Bengaluru Roots</div>
+                        <p class="diff-item-text">Decades of relationships with landowners, builders, and institutions across the city give us access and intelligence that no newcomer can replicate.</p>
+                    </div>
+                </div>
+                <div class="diff-item wow fadeInUp" data-wow-delay=".3s">
+                    <div class="diff-roman">II</div>
+                    <div>
+                        <div class="diff-item-title">Institutional Transparency</div>
+                        <p class="diff-item-text">Every engagement is backed by clear legal frameworks, documented agreements, and regular financial reporting. No ambiguity, ever.</p>
+                    </div>
+                </div>
+                <div class="diff-item wow fadeInUp" data-wow-delay=".4s">
+                    <div class="diff-roman">III</div>
+                    <div>
+                        <div class="diff-item-title">White-Glove Service</div>
+                        <p class="diff-item-text">A dedicated relationship manager for every client. We do not treat properties as numbers — we treat them as legacies.</p>
+                    </div>
+                </div>
+                <div class="diff-item wow fadeInUp" data-wow-delay=".5s">
+                    <div class="diff-roman">IV</div>
+                    <div>
+                        <div class="diff-item-title">End-to-End Expertise</div>
+                        <p class="diff-item-text">Land identification, development structuring, tenant placement, ongoing management — Chronos is your single, trusted partner.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diff-right">
+                <!-- Background building SVG watermark -->
+                <svg class="diff-right-bg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M150 20 L270 110 L270 280 L30 280 L30 110 Z" stroke="white" stroke-width="2"/>
+                    <path d="M150 20 L220 70 L220 180 L80 180 L80 70 Z" stroke="white" stroke-width="1.5"/>
+                    <rect x="120" y="200" width="60" height="80" stroke="white" stroke-width="1.5"/>
+                    <line x1="150" y1="200" x2="150" y2="280" stroke="white" stroke-width="1"/>
+                </svg>
+                <div class="diff-quote wow fadeInUp" data-wow-delay=".3s">
+                    <blockquote>Real estate is not just built on land. It is built on trust, time, and the right partner.</blockquote>
+                    <cite>— Chronos Philosophy</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT MINI ────────────────────────────────────────── -->
+    <section id="section-contact" class="ch-contact-section ch-section">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-4">
+                    <div class="ch-label wow fadeInUp">Get in Touch</div>
+                    <h2 class="ch-section-title wow fadeInUp" data-wow-delay=".1s">Schedule a<br>Consultation</h2>
+                    <div class="ch-contact-meta wow fadeInUp" data-wow-delay=".2s">
+                        <div class="ch-contact-meta-item">
+                            <div class="ch-contact-meta-label">Email</div>
+                            <div class="ch-contact-meta-value"><a href="mailto:hello@chronosproperties.in" style="color:#0d1e3b;text-decoration:none;">hello@chronosproperties.in</a></div>
+                        </div>
+                        <div class="ch-contact-meta-item">
+                            <div class="ch-contact-meta-label">Phone</div>
+                            <div class="ch-contact-meta-value">+91 [Number]</div>
+                        </div>
+                        <div class="ch-contact-meta-item">
+                            <div class="ch-contact-meta-label">Hours</div>
+                            <div class="ch-contact-meta-value">Monday – Saturday, 9 AM – 6 PM IST</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 wow fadeInUp" data-wow-delay=".3s">
+                    <form name="contactForm" id="contact_form" method="post" action="contact.html">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="ch-field-label">Your Name</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Raj Kumar" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="ch-field-label">Phone</label>
+                                <input type="tel" name="phone" class="form-control" placeholder="+91 98XXX XXXXX">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="ch-field-label">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="raj@example.com" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="ch-field-label">I am interested in</label>
+                                <div class="relative">
+                                    <select name="interest" class="form-control">
+                                        <option value="">Select…</option>
+                                        <option>Buying Property</option>
+                                        <option>Renting / Letting</option>
+                                        <option>Selling My Property</option>
+                                        <option>Investment Advisory</option>
+                                        <option>Joint Development</option>
+                                        <option>Property Management</option>
+                                        <option>I Have Land</option>
+                                        <option>General Enquiry</option>
+                                    </select>
+                                    <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="ch-field-label">Message</label>
+                                <textarea name="message" id="message" class="form-control h-100px" placeholder="Tell us about your requirement — location, size, goals, or any questions…" required></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <div id="submit">
+                                    <input type="submit" id="send_message" value="Submit Enquiry" class="btn-main">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="success_message" class="bg-color mt-4 p-40 rounded-3 shadow-sm">
+                        <h4 class="mb-2">Enquiry Received!</h4>
+                        <p class="mb-0">Thank you <strong><span id="user_name"></span></strong>. Our team will contact you within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MARQUEE STRIP ──────────────────────────────────────── -->
+    <section class="p-0">
+        <div class="ch-marquee-strip">
+            <div class="de-marquee-list-1">
+                <span class="gold">Property Development</span>
+                <span>&nbsp;·&nbsp;</span>
+                <span>Brokerage</span>
+                <span>&nbsp;·&nbsp;</span>
+                <span class="gold">Property Services</span>
+                <span>&nbsp;·&nbsp;</span>
+                <span>Joint Development</span>
+                <span>&nbsp;·&nbsp;</span>
+                <span class="gold">Investment Advisory</span>
+                <span>&nbsp;·&nbsp;</span>
+                <span>NRI Advisory</span>
+                <span>&nbsp;·&nbsp;</span>
+                <span class="gold">Premium Lettings</span>
+                <span>&nbsp;·&nbsp;</span>
+                <span>Land Acquisition</span>
+                <span>&nbsp;·&nbsp;</span>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ── FOOTER ──────────────────────────────────────────────── -->
+<footer class="ch-footer">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="ch-footer-logo-name">Chronos</div>
+                <div class="ch-footer-logo-sub">Endeavours &amp; Development Pvt. Ltd.</div>
+                <p class="ch-footer-desc">Built across time with trust. Bengaluru's end-to-end property partner — registered and operating across development, brokerage, and property services.</p>
+                <div class="social-icons mt-4">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-6">
+                <div class="ch-footer-col-title">Navigate</div>
+                <a href="index.html" class="ch-footer-link">Home</a>
+                <a href="#section-services" class="ch-footer-link">Services</a>
+                <a href="#section-difference" class="ch-footer-link">Why Chronos</a>
+                <a href="contact.html" class="ch-footer-link">Contact</a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="ch-footer-col-title">Services</div>
+                <a href="contact.html" class="ch-footer-link">Property Development</a>
+                <a href="contact.html" class="ch-footer-link">Buy &amp; Sell</a>
+                <a href="contact.html" class="ch-footer-link">Letting &amp; Rentals</a>
+                <a href="contact.html" class="ch-footer-link">Property Management</a>
+                <a href="contact.html" class="ch-footer-link">Joint Development</a>
+                <a href="contact.html" class="ch-footer-link">NRI Advisory</a>
+            </div>
+            <div class="col-lg-3">
+                <div class="ch-footer-col-title">Contact</div>
+                <span class="ch-footer-link">[Office Address], Bengaluru</span>
+                <a href="tel:+91" class="ch-footer-link">+91 [Number]</a>
+                <a href="mailto:hello@chronosproperties.in" class="ch-footer-link">hello@chronosproperties.in</a>
+                <span class="ch-footer-link">Mon – Sat, 9am – 6pm</span>
+            </div>
+        </div>
+        <hr class="ch-footer-divider">
+        <div class="row ch-footer-bottom align-items-center">
+            <div class="col-md-6">
+                <span>© 2025 Chronos · Endeavours and Development Pvt. Ltd. All rights reserved.</span>
+            </div>
+            <div class="col-md-6 text-md-end ch-footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">RERA Compliant</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Javascript Files -->
+<script src="js/vendors.js"></script>
+<script src="js/designesia.js"></script>
+<script src="js/custom-marquee.js"></script>
+<script src="js/validation-visit.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/custom-swiper-1.js"></script>
 
 </body>
 </html>
