@@ -2,23 +2,141 @@
 <html lang="en">
 
 <head>
-    <title>Homely - Single Property Real Estate Website Template</title>
+    <title>Contact – Chronos Endeavours &amp; Development</title>
     <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    <meta content="" name="description" >
-    <meta content="" name="keywords" >
-    <meta content="" name="author" >
-    <!-- CSS Files
-    ================================================== -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Get in touch with Chronos Endeavours & Development Pvt. Ltd. – Bengaluru's trusted real estate partner." name="description">
+    <!-- CSS Files ================================================== -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/plugins.css" rel="stylesheet" type="text/css" >
-    <link href="css/swiper.css" rel="stylesheet" type="text/css" >
-    <link href="css/style.css" rel="stylesheet" type="text/css" >
-    <link href="css/coloring.css" rel="stylesheet" type="text/css" >
-    <link href="css/swiper-custom-1.css" rel="stylesheet" type="text/css" >
-    <link href="css/colors/scheme-01.css" id="colors" rel="stylesheet" type="text/css" >
-    <link href="css/datepicker.css" rel="stylesheet" type="text/css" >
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper-custom-1.css" rel="stylesheet" type="text/css">
+    <link href="css/colors/scheme-01.css" id="colors" rel="stylesheet" type="text/css">
+    <link href="css/datepicker.css" rel="stylesheet" type="text/css">
+    <style>
+        :root {
+            --bg-dark-1: #0d1e3b;
+            --bg-dark-1-rgb: 13, 30, 59;
+            --primary-color: #C9A052;
+            --primary-color-rgb: 201, 160, 82;
+            --secondary-color: #C9A052;
+            --secondary-color-rgb: 201, 160, 82;
+        }
+
+        .chronos-logo { display:flex;flex-direction:column;line-height:1;text-decoration:none; }
+        .chronos-logo .logo-name { font-size:22px;font-weight:800;letter-spacing:4px;color:#0d1e3b;text-transform:uppercase; }
+        .chronos-logo .logo-sub { font-size:8px;letter-spacing:2px;color:#0d1e3b;text-transform:uppercase;opacity:0.7; }
+        header.header-scroll .chronos-logo .logo-name,
+        header.header-scroll .chronos-logo .logo-sub { color:#fff; }
+
+        /* Contact page hero */
+        .contact-hero {
+            background: #f5f3ee;
+            padding: 120px 0 80px;
+        }
+        .contact-hero h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            color: #0d1e3b;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .contact-hero h1 span { color: rgba(13,30,59,0.3); }
+
+        /* Info block */
+        .info-label {
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #C9A052;
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+        }
+        .info-value {
+            font-size: 15px;
+            color: #0d1e3b;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(13,30,59,0.1);
+        }
+        .info-value:last-child { border-bottom: none; }
+
+        /* Interest tags */
+        .interest-tags { display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px; }
+        .interest-tag {
+            padding: 8px 16px;
+            border: 1px solid rgba(13,30,59,0.2);
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #0d1e3b;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: transparent;
+            user-select: none;
+        }
+        .interest-tag:hover,
+        .interest-tag.active {
+            background: #0d1e3b;
+            color: #C9A052;
+            border-color: #0d1e3b;
+        }
+
+        /* Form field labels */
+        .field-label {
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(13,30,59,0.5);
+            margin-bottom: 6px;
+            display: block;
+        }
+        .form-control {
+            border-radius: 0;
+            border-color: rgba(13,30,59,0.15);
+            background: transparent;
+            color: #0d1e3b;
+            font-size: 14px;
+        }
+        .form-control:focus {
+            border-color: #C9A052;
+            box-shadow: none;
+        }
+        .form-control::placeholder { color: rgba(13,30,59,0.3); }
+
+        /* Submit button */
+        .btn-submit-full {
+            display: block;
+            width: 100%;
+            background: #0d1e3b;
+            color: #C9A052;
+            padding: 20px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .btn-submit-full:hover { opacity: 0.85; }
+
+        /* Footer */
+        .chronos-footer { background: #0d1e3b; }
+        .footer-nav-title { font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:20px; }
+        .footer-nav-link { display:block;color:rgba(255,255,255,0.65);font-size:14px;margin-bottom:10px;text-decoration:none;transition:color 0.2s; }
+        .footer-nav-link:hover { color:#C9A052; }
+        .footer-logo-name { font-size:28px;font-weight:800;letter-spacing:6px;color:#fff;text-transform:uppercase; }
+        .footer-logo-sub { font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4); }
+        .footer-desc { font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:280px;margin-top:16px; }
+        .footer-divider { border-color:rgba(255,255,255,0.08);margin:40px 0; }
+        .subfooter-chronos { font-size:12px;color:rgba(255,255,255,0.35); }
+        .subfooter-links a { font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;margin-left:24px; }
+        .subfooter-links a:hover { color:#C9A052; }
+        .subtitle { color:#C9A052; }
+    </style>
 </head>
 
 <body>
@@ -29,21 +147,21 @@
                 <div class="col-md-12">
                     <div class="de-flex">
                         <div class="de-flex-col">
-                            <!-- logo begin -->
                             <div id="logo">
-                                <a href="index.html">
-                                    <img class="logo-main" src="images/logo.webp" alt="" >
-                                    <img class="logo-scroll" src="images/logo.webp" alt="" >
-                                    <img class="logo-mobile" src="images/logo.webp" alt="" >
+                                <a href="index.html" class="chronos-logo">
+                                    <span class="logo-name">Chronos</span>
+                                    <span class="logo-sub">Endeavours &amp; Development Pvt. Ltd.</span>
                                 </a>
                             </div>
-                            <!-- logo close -->
                         </div>
 
                         <div class="de-flex-col">
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li><a class="menu-item" href="index.html">Home</a></li>
+                                    <li><a class="menu-item" href="index.html#section-services">Services</a></li>
+                                    <li><a class="menu-item" href="index.html#section-difference">Why Us</a></li>
+                                    <li><a class="menu-item" href="index.html#section-cta">Invest With Us</a></li>
                                     <li><a class="menu-item" href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -51,7 +169,7 @@
 
                         <div class="de-flex-col">
                             <div class="menu_side_area">
-                                <a href="contact.html" class="btn-main fx-slide"><span>Schedule Visit</span></a>
+                                <a href="contact.html" class="btn-main fx-slide"><span>Contact Us</span></a>
                                 <span id="menu-btn"></span>
                             </div>
                         </div>
@@ -60,151 +178,211 @@
             </div>
         </div>
     </header>
-    
+
     <main>
         <a href="#" id="back-to-top"></a>
-        <!-- page preloader begin -->
         <div id="de-loader"></div>
-        <!-- page preloader close -->
 
-        <section class="jarallax text-light relative overflow-hidden mt-80 mt-sm-50">
-            <img src="images/background/1.webp" class="jarallax-img" alt="">
-            <div class="container relative z-2">
-                <div class="row g-4 justify-content-between align-items-center">
-                    <div class="col-md-7">
-                        <h1 class="fs-72 fs-xs-10vw lh-1-1 split">Contact</h1>
-                    </div>
-                    <div class="col-md-5 text-md-end">
-                        <ul class="crumb text-light">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active">Contact</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="sw-overlay op-6"></div>
-        </section>
-
-        <section id="section-contact">
+        <!-- ── CONTACT HERO ──────────────────────────────────────── -->
+        <div class="contact-hero mt-80 mt-sm-50">
             <div class="container">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4">
-                        <p class="wow fadeInUp" data-wow-delay=".5s">Interested in this property or ready to see it in person? Send us your request and we’ll arrange a visit at your convenience.</p>
-                        <div class="mt-4 wow fadeInUp" data-wow-delay=".6s">
-                            <img src="images/team/1.webp" class="w-80px circle" alt="">
-                            <div class="mt-3">
-                                <h4 class="mb-0">Emily Rodriguez</h4>
-                                <div class="fw-500 id-color">(+1) 234-5678</div>
-                            </div>
-                        </div>
+                <div class="subtitle wow fadeInUp" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;">Get in Touch</div>
+                <h1 class="wow fadeInUp" data-wow-delay=".1s">LET'S BUILD<br><span>SOMETHING LASTING</span></h1>
+            </div>
+        </div>
+
+        <!-- ── CONTACT FORM SECTION ───────────────────────────────── -->
+        <section id="section-contact" style="background:#f5f3ee;">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- Left: contact info -->
+                    <div class="col-lg-4 wow fadeInUp">
+                        <div class="info-label">Location</div>
+                        <div class="info-value">[Office Address]<br>Bengaluru, Karnataka</div>
+
+                        <div class="info-label">Phone</div>
+                        <div class="info-value"><a href="tel:+91" style="color:#0d1e3b;text-decoration:none;">+91 [Number]</a></div>
+
+                        <div class="info-label">Email</div>
+                        <div class="info-value"><a href="mailto:hello@chronosproperties.in" style="color:#0d1e3b;text-decoration:none;">hello@chronosproperties.in</a></div>
+
+                        <div class="info-label">Hours</div>
+                        <div class="info-value">Monday – Saturday<br>9:00 AM – 6:00 PM IST</div>
+
+                        <div class="info-label">Company</div>
+                        <div class="info-value">Endeavours &amp; Development Pvt. Ltd.</div>
                     </div>
-                    <div class="col-lg-8 wow fadeInUp" data-wow-delay=".8s">
+
+                    <!-- Right: form -->
+                    <div class="col-lg-8 wow fadeInUp" data-wow-delay=".2s">
+
+                        <div class="mb-4">
+                            <div class="field-label mb-2">I Am Interested In</div>
+                            <div class="interest-tags" id="interest-tags">
+                                <span class="interest-tag active" data-val="Buying Property">Buying Property</span>
+                                <span class="interest-tag" data-val="Renting / Letting">Renting / Letting</span>
+                                <span class="interest-tag" data-val="Selling My Property">Selling My Property</span>
+                                <span class="interest-tag" data-val="Investment Advisory">Investment Advisory</span>
+                                <span class="interest-tag" data-val="Joint Development">Joint Development</span>
+                                <span class="interest-tag" data-val="Property Management">Property Management</span>
+                                <span class="interest-tag" data-val="I Have Land">I Have Land</span>
+                                <span class="interest-tag" data-val="General Enquiry">General Enquiry</span>
+                            </div>
+                            <input type="hidden" name="interest" id="selected-interest" value="Buying Property">
+                        </div>
+
                         <form name="contactForm" id="contact_form" method="post" action="contact.html">
-                            <div class="row g-4">
+                            <div class="row g-3">
                                 <div class="col-md-6">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                                    <label class="field-label">First Name</label>
+                                    <input type="text" name="firstname" class="form-control" placeholder="Raj" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="email" id="email" class="form-control" placeholder="Your Email" required>
+                                    <label class="field-label">Last Name</label>
+                                    <input type="text" name="lastname" class="form-control" placeholder="Kumar">
                                 </div>
                                 <div class="col-md-6">
-                                    <div id="date" class="relative input-group date" data-date-format="mm-dd-yyyy">
-                                        <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-calendar"></i>
-                                        <input class="form-control" name="date" type="text">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    <label class="field-label">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="raj@example.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="field-label">Phone</label>
+                                    <input type="tel" name="phone" class="form-control" placeholder="+91 98XXX XXXXX">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="field-label">Budget / Project Size</label>
+                                    <div class="relative">
+                                        <select name="budget" class="form-control">
+                                            <option value="">Select range</option>
+                                            <option>Under ₹50 Lakhs</option>
+                                            <option>₹50L – ₹1 Cr</option>
+                                            <option>₹1 Cr – ₹5 Cr</option>
+                                            <option>₹5 Cr – ₹25 Cr</option>
+                                            <option>₹25 Cr+</option>
+                                        </select>
+                                        <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                    <label class="field-label">Timeline</label>
                                     <div class="relative">
-                                        <select name="time" id="time" class="form-control">
-                                            <option value="10:00">10:00</option>
-                                            <option value="11:00">11:00</option>
-                                            <option value="12:00">12:00</option>
-                                            <option value="13:00">13:00</option>
-                                            <option value="14:00">14:00</option>
-                                            <option value="15:00">15:00</option>
-                                            <option value="16:00">16:00</option>
-                                            <option value="17:00">17:00</option>
-                                            <option value="18:00">18:00</option>
-                                            <option value="19:00">19:00</option>
-                                            <option value="20:00">20:00</option>
+                                        <select name="timeline" class="form-control">
+                                            <option value="">When are you looking?</option>
+                                            <option>Immediately</option>
+                                            <option>Within 3 months</option>
+                                            <option>3–6 months</option>
+                                            <option>6–12 months</option>
+                                            <option>Just exploring</option>
                                         </select>
                                         <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <textarea name="message" id="message" class="form-control h-100px" placeholder="Tell us your preferred date, time, or any questions" required></textarea>
+                                    <label class="field-label">Your Message</label>
+                                    <textarea name="message" id="message" class="form-control" rows="5" placeholder="Tell us about your requirement — location, size, goals, or any questions you have…" required></textarea>
                                 </div>
                                 <div class="col-md-12">
-                                    <div id='submit'>
-                                        <input type='submit' id='send_message' value='Request a Visit' class="btn-main">
+                                    <label class="field-label">How Did You Hear About Us?</label>
+                                    <div class="relative">
+                                        <select name="source" class="form-control">
+                                            <option value="">Select</option>
+                                            <option>Google Search</option>
+                                            <option>Social Media</option>
+                                            <option>Word of Mouth</option>
+                                            <option>Property Portal</option>
+                                            <option>Existing Client</option>
+                                            <option>Other</option>
+                                        </select>
+                                        <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
                                     </div>
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <button type="submit" class="btn-submit-full">Submit Enquiry</button>
                                 </div>
                             </div>
                         </form>
-                        <div id="success_message" class="bg-color mt-4 p-40 rounded-3 shadow-sm">
-                          <h4 class="mb-2">Home Visit Request Received!</h4>
-                          <p class="mb-0">
-                            Thank you <strong><span id="user_name"></span></strong> for submitting your home visit request.  
-                            Our team will review your details and contact you shortly to schedule the visit.
-                          </p>
+
+                        <div id="success_message" class="bg-color mt-4 p-40 rounded-3 shadow-sm" style="display:none;">
+                            <h4 class="mb-2">Enquiry Received!</h4>
+                            <p class="mb-0">Thank you for reaching out. Our team will contact you within 24 hours.</p>
                         </div>
 
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
 
     </main>
 
-    <footer class="text-light section-dark">
+    <!-- ── FOOTER ──────────────────────────────────────────────── -->
+    <footer class="chronos-footer text-light">
         <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-12">
-                    <div class="d-lg-flex align-items-center justify-content-between text-center">
-                        <div>
-                            <h3 class="fs-20">Address</h3>
-                            742 Evergreen Terrace<br>
-                            Brooklyn, NY 11201
-                        </div>
-                        <div>
-                            <img src="images/logo-white.webp" class="w-150px" alt=""><br>
-                            <div class="social-icons mb-sm-30 mt-4">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
-
-                        </div>
-                        <div>
-                            <h3 class="fs-20">Contact Us</h3>
-                            T. (+1) 234-5678<br>
-                            M. contact@homely.com
-                        </div>
+            <div class="row g-5 pt-5 pb-4">
+                <div class="col-lg-4">
+                    <div class="footer-logo-name">Chronos</div>
+                    <div class="footer-logo-sub">Endeavours &amp; Development Pvt. Ltd.</div>
+                    <p class="footer-desc">Built across time with trust. Bengaluru's end-to-end property partner — registered and operating across development, brokerage, and property services.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
-                </div>                    
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="footer-nav-title">Navigate</div>
+                    <a href="index.html" class="footer-nav-link">Home</a>
+                    <a href="index.html#section-services" class="footer-nav-link">Services</a>
+                    <a href="index.html#section-difference" class="footer-nav-link">Why Chronos</a>
+                    <a href="contact.html" class="footer-nav-link">Contact</a>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="footer-nav-title">Services</div>
+                    <a href="contact.html" class="footer-nav-link">Property Development</a>
+                    <a href="contact.html" class="footer-nav-link">Buy &amp; Sell</a>
+                    <a href="contact.html" class="footer-nav-link">Letting &amp; Rentals</a>
+                    <a href="contact.html" class="footer-nav-link">Property Management</a>
+                    <a href="contact.html" class="footer-nav-link">Joint Development</a>
+                    <a href="contact.html" class="footer-nav-link">NRI Advisory</a>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-nav-title">Contact</div>
+                    <p class="footer-nav-link">[Office Address], Bengaluru, Karnataka</p>
+                    <a href="tel:+91" class="footer-nav-link">+91 [Number]</a>
+                    <a href="mailto:hello@chronosproperties.in" class="footer-nav-link">hello@chronosproperties.in</a>
+                    <p class="footer-nav-link">Mon – Sat, 9am – 6pm</p>
+                </div>
             </div>
-        </div>
-        <div class="subfooter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        Copyright 2025 - Homely by Designesia
-                    </div>
+            <hr class="footer-divider">
+            <div class="row pb-4">
+                <div class="col-md-6">
+                    <span class="subfooter-chronos">© 2025 Chronos · Endeavours and Development Pvt. Ltd. All rights reserved.</span>
+                </div>
+                <div class="col-md-6 text-md-end subfooter-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">RERA Compliant</a>
                 </div>
             </div>
         </div>
-    </footer>    
+    </footer>
 
-    <!-- Javascript Files
-    ================================================== -->
+    <!-- Javascript Files ================================================== -->
     <script src="js/vendors.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/custom-datepicker.js"></script>
     <script src="js/validation-visit.js"></script>
 
+    <script>
+        /* Interest tag toggle */
+        document.querySelectorAll('.interest-tag').forEach(function(tag) {
+            tag.addEventListener('click', function() {
+                document.querySelectorAll('.interest-tag').forEach(function(t) { t.classList.remove('active'); });
+                tag.classList.add('active');
+                document.getElementById('selected-interest').value = tag.getAttribute('data-val');
+            });
+        });
+    </script>
 
 </body>
-
 </html>
